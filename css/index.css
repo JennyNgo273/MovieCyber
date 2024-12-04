@@ -97,6 +97,49 @@ header p{
     z-index: 16;
 }
 
+.my__name{
+
+    background: -webkit-linear-gradient(45deg, #ec7532, #fbbd61 50%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: text-simple-animation-rev 0.75s ease forwards;
+    font-size: 5rem;
+    font-weight: bolder;
+}
+
+.my__name:hover{
+    cursor: pointer;
+    animation: text-simple-animation 0.5s ease-in forwards;
+}
+@keyframes text-simple-animation-rev {
+    0% {
+        background-size: 650%;
+    }
+    40% {
+        background-size: 650%;
+    }
+    100% {
+        background-size: 100%;
+    }
+}
+
+/* Move the background and make it larger. */
+/* Animation shown when hovering over the text. */
+@keyframes text-simple-animation {
+    0% {
+        background-size: 100%;
+    }
+    80% {
+        background-size: 650%;
+    }
+    100% {
+        background-size: 650%;
+    }
+}
+
+
+
+
 /* CAROUSEL */
 #carouselMovie .carousel-item .carousel-caption{
     top: 55%;
@@ -223,7 +266,7 @@ header p{
     background-position: center;
     background-size: cover;
 }
-#carouselMovie .carousel-item:first-child{
+/* #carouselMovie .carousel-item:first-child{
     background-image: url("../img/hero-1.jpg");  
 }
 #carouselMovie .carousel-item:nth-child(2){
@@ -231,24 +274,38 @@ header p{
 }
 #carouselMovie .carousel-item:nth-child(3){
     background-image: url("../img/hero-3.jpg");
-}
+} */
 
 /* NEWIN */
+.newIn{
+    background: #0D0F16;
+    background-size: cover;
+    color: #fff;
+}
 .newIn__title{
     text-align: center;
 }
 .newIn__title h3{
     font-size: 18px;
-    color: #4a4a4a;
+    color: #ffff;
     margin: 1rem 0;
 }
 .newIn__title i{
     color: #fbbd61;
 }
 .newIn__img{
+    
     position: relative;
     overflow: hidden;
     border-radius: 10px;
+    
+}
+.newIn__img .img__fix{
+    width: 306px;
+    height: 229px;
+}
+.newIn__img .img__ccl{
+    background-color: #fbbd61;
 }
 .newIn__overlay{
     width: 200% ;
@@ -294,6 +351,9 @@ header p{
 .newIn__play i:hover{
     transform: scale(0.9);
 }
+.newIn__play button:hover{
+    transform: scale(0.9);
+}
 .newIn__play a{
     color: white;
     text-decoration: none;
@@ -309,6 +369,10 @@ header p{
 }
 
 /* SHOWTIMES */
+.showTime{
+    background: #0D0F16;
+    background-size: cover;
+}
 .showTime .nav-tabs .nav-item.show .nav-link, .showTime .nav-tabs .nav-link.active{
     border: none;
 }
@@ -321,7 +385,7 @@ header p{
     padding: 0;
     font-size: 18px;
     letter-spacing: 1px;
-    color: #4a4a4a;
+    color: #ffff;
 }
 .showTime .nav-tabs .nav-link span{
     display: inline-block;
@@ -343,10 +407,13 @@ header p{
     margin-bottom: 0;
     text-transform: uppercase;
 }
+.experience__time{
+    color: white;
+}
 .showTime__row h3{
     font-size: 24px;
     font-weight: 300;
-    color: #101010;
+    color: #fff;
     letter-spacing: 1px;
 }
 .showTime__row a{
@@ -357,17 +424,17 @@ header p{
     transition: 0.5s;
 }
 .showTime__row a:hover{
-    color: #101010;
+    color: #fff;
 }
 .showTime__viewing{
     font-size: 12px;
     letter-spacing: 1.5px;
-    color: #4a4a4a;
+    color: #fff;
 }
 .showTime__viewing button{
     font-size: 14px;
     letter-spacing: 2px;
-    color: #717171;
+    color: #fff;
     background-color: #d8d8d8;
 }
 .showTime__mins span:last-child{
@@ -384,10 +451,11 @@ header p{
 
 /* COMING SOON */
 .comingsoon{
-    background: #101010 url("../img/slide-3.png") ;
+    background: #0D0F16;
     background-size: cover;
     color: white;
 }
+
 .comingsoon__type{
     font-size: 14px;
     letter-spacing: 2px;
@@ -416,6 +484,7 @@ header p{
 }
 .comingsoon__video{
     position: relative;
+    background-color: #5BC2E7;
 }
 .comingsoon__video i{
     position: absolute;
